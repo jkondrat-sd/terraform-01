@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   zookeeper:
-    image: bitnami/zookeeper:3.8
+    image: soldevelo/zookeeper:3.8
     environment:
       - ZOO_ENABLE_AUTH=no
       - ZOO_CLIENT_PORT=2181
@@ -10,7 +10,7 @@ services:
       - "2181:2181"
 
   kafka:
-    image: bitnami/kafka:3.6
+    image: soldevelo/kafka:3.6
     depends_on:
       - zookeeper
     environment:
